@@ -4,11 +4,11 @@
 
 This project uses a heart attack dataset to explore the relationships between various features and the occurrence of heart attacks. It applies data exploration techniques, visualizes correlations and distributions, and builds a machine learning model (Gaussian Naive Bayes classifier) to predict heart attack likelihood.
 
-# Libraries and Dataset
+**Libraries and Dataset**
 
 The project kicks off by importing essential Python libraries for data analysis, including Pandas, Matplotlib, and Seaborn. The dataset, which contains information related to heart disease, is loaded for exploration and analysis
 
-Here’s a data dictionary for the **Heart Attack Data Set** presented in a table format:
+Here’s a data dictionary for the Heart Attack Data Set presented in a table format:
 
 | **Feature**         | **Description**                                                                 |
 |---------------------|---------------------------------------------------------------------------------|
@@ -27,7 +27,8 @@ Here’s a data dictionary for the **Heart Attack Data Set** presented in a tabl
 | **thal**            | Thalassemia (0 = normal, 1 = fixed defect, 2 = reversible defect).               |
 | **target**          | Presence or absence of heart disease (1 = yes, 0 = no).                         |
 
-# Display Top Rows of the Dataset
+
+**Display Top Rows of the Dataset**
 
  The first five rows of the dataset are displayed using df.head(), providing an initial overview of the columns and their values.
 
