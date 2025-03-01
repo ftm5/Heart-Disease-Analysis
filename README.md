@@ -4,9 +4,9 @@
 
 This project uses a heart attack dataset to explore the relationships between various features and the occurrence of heart attacks. It applies data exploration techniques, visualizes correlations and distributions, and builds a machine learning model (Gaussian Naive Bayes classifier) to predict heart attack likelihood.
 
-**Libraries and Dataset**
+**Libraries and dataset**
 
-The project kicks off by importing essential Python libraries for data analysis, including Pandas, Matplotlib, and Seaborn. The dataset, which contains information related to heart disease, is loaded for exploration and analysis
+The project kicks off by importing essential Python libraries for data analysis, including Pandas, Matplotlib, and Seaborn. The dataset, which contains information related to heart disease, is loaded for exploration and analysis.
 
 Here’s a data dictionary for the Heart Attack Data Set presented in a table format:
 
@@ -27,9 +27,24 @@ Here’s a data dictionary for the Heart Attack Data Set presented in a table fo
 | **thal**            | Thalassemia (0 = normal, 1 = fixed defect, 2 = reversible defect).               |
 | **target**          | Presence or absence of heart disease (1 = yes, 0 = no).                         |
 
-
-**Display Top Rows of the Dataset**
+**Display top rows of the dataset**
 
  The first five rows of the dataset are displayed using df.head(), providing an initial overview of the columns and their values.
+
+**Get information about the dataset and find shape of it**
+
+Next step provides an overview of the dataset's structure, including its dimensions (rows and columns) and basic summary information such as data types and non-null counts.
+
+**Check for null values**
+
+Both isnull() and isna() are used to identify missing values and sum() aggregates the count of missing entries per column. This helps assess data completeness before analysis. Fortunately, the dataset is found to be free of any null values.
+
+**Check for duplicated values**
+
+The duplicated() function checks for duplicate rows and this code filters and displays them, helping ensure data quality by identifying any repeated entries.
+
+**Get overall statistics about the dataset:**
+
+It provides essential metrics such as mean, standard deviation and quartiles, helping to understand the distribution and variability of the data. This summary offers a quick snapshot of the central tendencies and spread within the dataset.
 
  
