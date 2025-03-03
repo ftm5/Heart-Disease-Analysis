@@ -2,7 +2,7 @@
 
 **Introduction**
 
-This project uses a heart attack dataset to explore the relationships between various features and the occurrence of heart attacks. It applies data exploration techniques, visualizes correlations and distributions, and builds a machine learning model (Gaussian Naive Bayes classifier) to predict heart attack likelihood.
+This project uses a heart disease dataset to explore the relationships between various features and the occurrence of heart disease. It applies data exploration techniques, visualizes correlations and distributions, and builds a machine learning model (Gaussian Naive Bayes classifier) to predict heart disease likelihood.
 
 **Libraries and dataset**
 
@@ -59,34 +59,61 @@ From the correlation heatmap, we would focus on features that show a strong corr
 
 The countplot shows the frequency of heart attacks (1) versus no heart attack (0). This helps to quickly assess the class distribution of the target variable. 
 
-![Image](https://github.com/user-attachments/assets/2b403eee-d850-44ff-94fb-279e2618fb43)
+![Image](https://github.com/user-attachments/assets/96b316b5-b63a-4697-944a-34e19fd21337)
 
 **Target vs sex distribution**
 
-Gender is an important factor in health-related studies, as it can influence the likelihood of heart attacks. This visualization helps to compare the heart attack distribution across genders, allowing us to easily see if one gender is more affected than the other.
+Gender is an important factor in health-related studies, as it can influence the likelihood of heart attacks. This visualization helps to compare the heart disease distribution across genders, allowing us to easily see if one gender is more affected than the other.
 
-![Image](https://github.com/user-attachments/assets/b34b2a6e-b38d-461f-b49f-a9a39aa1bd4a)
+![Image](https://github.com/user-attachments/assets/3e652b91-feba-4d1f-9ccf-e10772c4f36a)
 
 **Age distribution**
 
-The histplot is used to show how age is distributed, with a Kernel Density Estimate (KDE) curve highlighting trends. The age feature is important for analyzing health conditions like heart attacks, as age can significantly impact risk. This visualization helps to understand the age demographics of the dataset and any patterns related to heart attack occurrences.
+The histplot is used to show how age is distributed, with a Kernel Density Estimate (KDE) curve highlighting trends. The age feature is important for analyzing health conditions like heart disease, as age can significantly impact risk. This visualization helps to understand the age demographics of the dataset and any patterns related to heart disease occurrences.
 
-![Image](https://github.com/user-attachments/assets/fc07e2ec-bddc-4acf-80b0-7edfc655e24c)
+![Image](https://github.com/user-attachments/assets/701b63a4-83f8-45e1-ad98-6148d860b569)
 
 **Chol distribution**
 
 Cholesterol is a key factor in cardiovascular health, making it important to explore its distribution across both groups. This plot helps to identify the spread, central tendency, and potential outliers in cholesterol levels for each group, offering insights into the relationship between cholesterol levels and heart disease.
 
-![Image](https://github.com/user-attachments/assets/85e77e1e-afa2-4b25-bebb-48fb1f5a8b85)
+![Image](https://github.com/user-attachments/assets/6b0fb084-4d81-408b-b127-3f92fd94f51c)
 
 **CP distribution**
 
 Chest pain type is an important feature in heart disease diagnosis, so understanding its distribution across the dataset helps to assess which types of pain are more common.
 
-![Image](https://github.com/user-attachments/assets/6e095a4a-069d-4fce-865e-8eca9289e3ad)
+![Image](https://github.com/user-attachments/assets/fb2f3fe1-5f40-49c7-a1de-4be342fe1a2a)
 
 **Relation between 'age' and 'thalach' (maximum heart rate)**
 
 This plot allows for an easy comparison between individuals with and without heart disease, offering insights into whether age impacts maximum heart rate and if heart disease influences this relationship.
 
-![Image](https://github.com/user-attachments/assets/0bbb628b-a5d8-4609-8fd9-a0b2811269c6)
+![Image](https://github.com/user-attachments/assets/e66f3bad-80eb-4b58-b8c4-5bc1b9bce8ba)
+
+
+**Feature and Target Variable Separation**
+
+After impoting essential libraries for modeling and evaluation. The script separates the features (X) and the target variable (y) from the dataset.
+
+**Data Splitting**
+
+In the next part, data is splitted into training (80%) and testing (20%) sets using train_test_split with a fixed random seed for reproducibility.
+
+**Model initialization, training and prediction**
+
+The GaussianNB model is used from scikit-learn to perform classification. It trains the model on X_train and y_train using the fit() method, then makes 
+
+predictions on X_test with the predict() method to generate the predicted labels (y_pred).
+
+**Model evaluation**
+
+This step evaluates the model's performance by calculating the accuracy using accuracy_score(), which is printed as a percentage. 
+
+The confusion matrix is generated and visualized with a heatmap to show the counts of true positives, false positives, etc.
+
+![Image](https://github.com/user-attachments/assets/f0fc49b4-c758-4ab8-81d3-d0451c1bd0a5)
+
+Finally, a classification report is printed, providing detailed metrics like precision, recall, and F1-score.
+
+
